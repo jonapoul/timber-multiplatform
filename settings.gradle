@@ -1,6 +1,0 @@
-include ':timber'
-include ':timber:japicmp'
-include ':timber-lint'
-include ':timber-sample'
-
-rootProject.name = 'timber-root'

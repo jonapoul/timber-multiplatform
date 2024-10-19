@@ -1,0 +1,46 @@
+[versions]
+# Plugins
+agp = "7.4.2"
+androidCacheFix = "3.0.1"
+blueprint = "0.9.0"
+dependencyAnalysis = "1.20.0"
+dependencyVersions = "0.51.0"
+detekt = "1.23.7"
+dokka = "1.8.20"
+jetbrains-annotations = "20.1.0"
+kotlin = "1.8.22"
+kover = "0.8.3"
+publish = "0.29.0-tak"
+spotless = "6.25.0"
+
+# Testing
+test-junit = "4.13.2"
+test-robolectric = "4.13"
+
+[libraries]
+# Plugins
+plugin-blueprint-core = { module = "dev.jonpoulton.blueprint:core", version.ref = "blueprint" }
+plugin-blueprint-recipes = { module = "dev.jonpoulton.blueprint:recipes", version.ref = "blueprint" }
+plugin-publish = { module = "dev.jonpoulton.gradle-maven-publish-plugin:plugin", version.ref = "publish" }
+
+# Libraries
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
+
+# Testing
+test-junit = { module = "junit:junit", version.ref = "test-junit" }
+test-kotlin-common = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+test-kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+test-robolectric = { module = "org.robolectric:robolectric", version.ref = "test-robolectric" }
+
+[plugins]
+agp-lib = { id = "com.android.library", version.ref = "agp" }
+androidCacheFix = { id = "org.gradle.android.cache-fix", version.ref = "androidCacheFix" }
+dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
+dependencyVersions = { id = "com.github.ben-manes.versions", version.ref = "dependencyVersions" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+publish = { id = "dev.jonpoulton.maven.publish", version.ref = "publish" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
